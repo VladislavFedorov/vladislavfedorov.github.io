@@ -2,96 +2,23 @@
 
 <html>
 <head>
-  <title>Vladislav Fedorov | homepage</title>
+  <title>V.F. // Homepage</title>
   <meta charset="utf-8">
   <style>
-		a, a:visited { color: black; }
-		h1, h2, h3, h4, h5, h6, p { padding-left: 50px; }
-		h4 { font-style: italic; }
-		ul { padding-left: 100px; }
-		.padding-top { padding-top: 20px; }
-		.notes { font-style: italic; }
-		#first-note, #second-note, #third-note { color: white; }
+    a, a:visited { color: black; }
+    h1, h4 { text-align: center; }		
   </style>
 </head>
 
 <body>
 
-<h1><a href="index.html">Vladislav Fedorov</a></h1>
-<h4>Contact me: contact [at] vladislavfedorov.ru</h4>
-
-<blockquote>
-<h3>Professional</h3>
-	<ul>
-		<li>
-			<a href="https://github.com/vladislavfedorov" target="_blank" id="first-note-a">Github</a>
-			<span class="notes" id="first-note">// I'm currently a system administrator, but I'm learning programming.</span>
-		</li>
-		
-	</ul>
-
-<h3>Hobbies and pastime</h3>
-	<ul>
-		<li>
-			<a href="https://www.metal-archives.com/users/Salpius" target="_blank" id="second-note-a">Metal archives</a>
-			<span class="notes" id="second-note">// More than 3000 entries;</span>
-		</li>
-		<li>
-		    <a href="https://github.com/vladislavfedorov/vladislavfedorov.github.io/tree/master/translations" target="_blank">Translations</a>;
-		</li>
-		<li>
-			<a href="https://www.postcrossing.com/user/vladislavfedorov" target="_blank" id="third-note-a">Postcrossing</a>
-			<span class="notes" id="third-note">// Inactive.</span>
-		</li>
-	</ul>
-	<h3>Fun facts</h3>
-	<ul>
-		<li>I'm a citizen of Ladonia with august 2019.</li>
-	</ul>
-</blockquote>
-
-
-
-<p>
-<p>
-
-<p class="padding-top">
-// The source code is publicly available, so if you see something that's incorrect, please <a href="https://github.com/vladislavfedorov/vladislavfedorov.github.io/pulls" target="_blank">submit a pull request.</a>
-</p>
-<p>Last update: 15.10.2019</p>
-
+  <h1><a href="index.html">Vladislav Fedorov</a></h1>
+  <h4 id="blink"> Contact me: contact [at] vladislavfedorov.ru </h4>
 
 <script>
-
-window.onload = function() {
-
-	let firstNoteA = document.querySelector('#first-note-a');
-	let secondNoteA = document.querySelector('#second-note-a');
-	let thirdNoteA = document.querySelector('#third-note-a');
-  
-	firstNoteA.onmouseout = function(e) {
-		document.getElementById('first-note').style.color = 'white';
-	}
-	firstNoteA.onmouseover = function(e) {
-		document.getElementById('first-note').style.color = 'gray';
-	} // end-first-a
-
-	secondNoteA.onmouseout = function(e) {
-		document.getElementById('second-note').style.color = 'white';
-	}
-	secondNoteA.onmouseover = function(e) {
-		document.getElementById('second-note').style.color = 'gray';
-	} // end-second-a
-	  
-	thirdNoteA.onmouseout = function(e) {
-		document.getElementById('third-note').style.color = 'white';
-	}
-	thirdNoteA.onmouseover = function(e) {
-		document.getElementById('third-note').style.color = 'gray';
-	} // end-third-a
-	
-}; // window.onload
-
+  setInterval(function(){
+      blink.style.opacity = 1 - (blink.style.opacity || 1);
+  },3e3);
 </script>
 
 </body>
